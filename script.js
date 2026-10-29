@@ -1,28 +1,6 @@
-/* Add your published Tableau view URL below.
-   Example format: https://public.tableau.com/views/WorkbookName/DashboardName?:showVizHome=no
-   Use the published view URL, not the local .twbx file. */
-const TABLEAU_VIEW_URL = "https://public.tableau.com/app/profile/tejswa.purohit/viz/Book1_17931851890660/Dashboard3"
-
-const menuToggle = document.getElementById('menuToggle');
-const nav = document.getElementById('nav');
-menuToggle?.addEventListener('click', () => {
-  const open = nav.classList.toggle('open');
-  menuToggle.setAttribute('aria-expanded', String(open));
-  menuToggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
-});
-nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-  nav.classList.remove('open');
-  menuToggle?.setAttribute('aria-expanded', 'false');
-}));
-document.getElementById('year').textContent = new Date().getFullYear();
-
-if (TABLEAU_VIEW_URL.startsWith('https://public.tableau.com/')) {
-  const iframe = document.getElementById('tableauEmbed');
-  const placeholder = document.getElementById('embedPlaceholder');
-  const separator = TABLEAU_VIEW_URL.includes('?') ? '&' : '?';
-
-iframe.src = TABLEAU_VIEW_URL + separator +
-  ':embed=yes&:showVizHome=no&:tabs=yes&:toolbar=yes';
-  iframe.hidden = false;
-  placeholder.hidden = true;
-}
+(()=>{const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("show");obs.unobserve(e.target)}}),{threshold:.12});$$(".hero,.section,.section-head,.cards article,.tableau-panel,.faq-grid").forEach(e=>{e.classList.add("reveal");obs.observe(e)});const start=Date.now();
+const progress=$("#scrollProgress"), aura=$("#cursorAura"), field=$("#particleField");
+if(field){for(let i=0;i<32;i++){const p=document.createElement("i");p.className="particle";p.style.left=(Math.random()*100)+"%";p.style.setProperty("--drift",((Math.random()*160)-80)+"px");p.style.animationDuration=(10+Math.random()*18)+"s";p.style.animationDelay=(-Math.random()*25)+"s";p.style.opacity=(.15+Math.random()*.45).toFixed(2);field.append(p)}}
+window.addEventListener("scroll",()=>{const max=document.documentElement.scrollHeight-window.innerHeight;progress.style.width=(max>0?window.scrollY/max*100:0)+"%"},{passive:true});
+window.addEventListener("pointermove",e=>{aura.style.left=e.clientX+"px";aura.style.top=e.clientY+"px"},{passive:true});
+setInterval(()=>{let s=Math.floor((Date.now()-start)/1000);$("#clock").textContent=[Math.floor(s/3600),Math.floor(s/60)%60,s%60].map(n=>String(n).padStart(2,"0")).join(":")},1000);for(let i=0;i<20;i++){let b=document.createElement("i");b.style.height=(20+Math.random()*80)+"%";b.style.animationDelay=Math.random()+"s";$("#bars").append(b)}let boosted=0,battery=78;function telemetry(){let boost=Date.now()<boosted,throttle=boost?100:65+Math.round(Math.random()*32);$("#speed").textContent=boost?320+Math.round(Math.random()*8):250+Math.round(Math.random()*58);$("#throttle").textContent=throttle+"%";$("#throttlebar").style.width=throttle+"%";battery=Math.max(25,Math.min(99,battery+Math.random()*4-2));$("#battery").textContent=Math.round(battery)+"%";$("#batterybar").style.width=battery+"%";$("#sector").textContent=String(1+Math.floor(Date.now()/7000%3)).padStart(2,"0");$$(".bars i").forEach(b=>b.style.height=18+Math.random()*82+"%")}telemetry();setInterval(telemetry,1800);$("#boost").addEventListener("click",()=>{boosted=Date.now()+4500;$("#boost").classList.add("active");$("#boost").textContent="⚡ OVERTAKE SIMULATED!";telemetry();setTimeout(()=>{$("#boost").classList.remove("active");$("#boost").textContent="⚡ SIMULATE OVERTAKE"},4500)});$("#menu").addEventListener("click",()=> $("nav").classList.toggle("open"));$$("nav a").forEach(a=>a.addEventListener("click",()=> $("nav").classList.remove("open")));$("#year").textContent=new Date().getFullYear();$$(".faqs details").forEach(d=>d.addEventListener("toggle",()=>{if(d.open)$$(".faqs details").forEach(o=>{if(o!==d)o.open=false})}));})();
