@@ -1,45 +1,31 @@
-# Formula 1 Race Intelligence Dashboard
+# F1 Race Intelligence — website
 
-## Project Overview
-The Formula 1 Race Intelligence Dashboard is a data analytics project built using Tableau. It explores Formula 1 racing performance through driver statistics, constructor performance, race wins, podiums, pole positions, and championship trends.
+A responsive one-page project website with a midnight-navy / electric-cyan telemetry theme. It links to the existing GitHub repository and includes a ready-to-connect Tableau Public embed area.
 
-## Live Dashboard
-Explore the interactive Tableau Public Story:
+## Files
+- `index.html` — page content and sections
+- `style.css` — responsive design and theme
+- `script.js` — mobile navigation and Tableau embed connection
 
-[View Formula 1 Race Intelligence on Tableau Public](https://public.tableau.com/app/profile/tejswa.purohit/viz/Book1_17931851890660/Story1?publish=yes)
+## Connect the live Tableau dashboard
+1. Publish your workbook/dashboard to Tableau Public if it is not already published.
+2. Open the published view on Tableau Public and copy its view URL. It should begin with `https://public.tableau.com/`.
+3. Open `script.js` in a text editor.
+4. Replace `PASTE_YOUR_TABLEAU_PUBLIC_VIEW_URL_HERE` with the copied published view URL, keeping the quotation marks.
+5. Save and refresh `index.html` in your browser. The embed placeholder will be replaced by the live dashboard.
 
-## Project Objectives
-- Analyze constructor and team performance.
-- Compare drivers using wins, points, podiums, and pole positions.
-- Explore championship results and historical season trends.
-- Present racing data through interactive visualizations.
-- Communicate findings using a Tableau dashboard and story.
+Do not paste a local `.twbx` file path into the embed setting. The workbook must be published and publicly accessible for visitors to see it.
 
-## Dashboard Features
-- Team Points Trend
-- Total Points by Team
-- Total Points by Driver
-- Total Wins by Driver
-- Driver World Championships
-- Championships by Team
-- Total Podiums by Driver
-- Total Pole Positions by Driver
-- Race Wins by Season
-- Interactive filters and legends, where available
+## Publish with GitHub Pages
+1. Extract this ZIP.
+2. Upload `index.html`, `style.css`, `script.js`, and `README.md` to the root of `https://github.com/kmtp-png/Formula1-Race-Intelligence` (or put them in a `website` folder if you prefer to keep the workbook files separate).
+3. In GitHub, open **Settings → Pages**.
+4. Under **Build and deployment**, choose **Deploy from a branch**, select `main` and `/ (root)` if the files are in the root, then save.
+5. Wait for GitHub Pages to provide the published website URL.
 
-## Tools Used
-- Tableau Public
-- Formula 1 dataset
-- GitHub for project versioning and documentation
+If the repository already has a `index.html`, do not overwrite it until you have backed it up or checked its contents.
 
-## Project Files
-- `Formula1_RaceIntelligenceII.twbx` — packaged Tableau workbook containing the dashboard and supporting workbook data, if embedded.
-
-## How to Open the Project
-1. Download the `.twbx` file from this repository.
-2. Install Tableau Public or a compatible version of Tableau Desktop.
-3. Open Tableau and select the downloaded workbook.
-4. Explore the available worksheets, dashboard, and story.
-
-## Conclusion
-This project demonstrates how data visualization can be used to compare Formula 1 drivers and constructors, identify performance patterns, and communicate racing insights in an interactive format.
+## Notes
+- The hero telemetry values and chart-like graphics are illustrative design elements, not live race timing.
+- The actual data visualizations should come from the embedded Tableau workbook.
+- The page uses Google Fonts when internet access is available; fallback fonts are included.

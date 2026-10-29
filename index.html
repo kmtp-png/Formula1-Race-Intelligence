@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071426">
+  <meta name="description" content="Formula 1 Race Intelligence — an interactive motorsport analytics project exploring teams, drivers, seasons and race-winning performance.">
+  <title>F1 // Race Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="F1 Race Intelligence home"><span class="brand-mark">F1<span>•</span></span><span class="brand-copy">RACE <b>INTELLIGENCE</b><small>DATA / SPEED / STRATEGY</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav id="nav"><a href="#overview">Overview</a><a href="#analytics">Analytics</a><a href="#tableau">Tableau Lab</a><a href="#method">Methodology</a><a class="nav-cta" href="https://github.com/kmtp-png/Formula1-Race-Intelligence" target="_blank" rel="noreferrer">VIEW REPOSITORY ↗</a></nav>
+  </header>
+
+  <main id="home">
+    <section class="hero section-wrap">
+      <div class="hero-grid"></div><div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> MOTORSPORT DATA SYSTEM / 001</div>
+        <h1>BEYOND THE<br><span>CHEQUERED</span><br>FLAG<span class="cyan">.</span></h1>
+        <p class="hero-lede">A data-driven look at the decisions, drivers and constructors that shape Formula 1 history.</p>
+        <div class="hero-actions"><a class="button primary" href="#tableau">EXPLORE THE DATA <span>↘</span></a><a class="button ghost" href="https://github.com/kmtp-png/Formula1-Race-Intelligence" target="_blank" rel="noreferrer">SOURCE CODE ↗</a></div>
+        <div class="hero-foot"><span><i></i> TABLEAU-POWERED ANALYTICS</span><span>INDEPENDENT DATA PROJECT</span></div>
+      </div>
+      <div class="hero-visual" aria-label="Abstract racing telemetry illustration">
+        <div class="radar radar-one"></div><div class="radar radar-two"></div>
+        <svg class="track" viewBox="0 0 600 440" role="img" aria-label="Abstract circuit map line"><defs><filter id="glow"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><path d="M103 312 L82 253 Q72 222 105 207 L176 174 Q198 164 218 179 L251 205 Q269 220 296 202 L343 168 Q365 151 393 166 L467 207 Q492 222 476 248 L448 293 Q435 313 408 307 L365 297 Q337 291 319 314 L289 351 Q269 373 243 356 L197 326 Q176 313 156 327 L128 344 Q111 353 103 312Z" fill="none" stroke="#12314a" stroke-width="28" stroke-linejoin="round"/><path d="M103 312 L82 253 Q72 222 105 207 L176 174 Q198 164 218 179 L251 205 Q269 220 296 202 L343 168 Q365 151 393 166 L467 207 Q492 222 476 248 L448 293 Q435 313 408 307 L365 297 Q337 291 319 314 L289 351 Q269 373 243 356 L197 326 Q176 313 156 327 L128 344 Q111 353 103 312Z" fill="none" stroke="#00e5ff" stroke-width="3" stroke-linejoin="round" filter="url(#glow)"/><circle cx="103" cy="312" r="7" fill="#eafaff" stroke="#00e5ff" stroke-width="4"/><path d="M103 312 L36 365" stroke="#00e5ff" stroke-dasharray="4 7" opacity=".7"/><path d="M393 166 L448 105" stroke="#00e5ff" stroke-dasharray="4 7" opacity=".7"/><circle cx="448" cy="105" r="4" fill="#00e5ff"/></svg>
+        <div class="telemetry-card card-a"><span class="mini-label">LIVE TELEMETRY / CONCEPT</span><strong>+0.284<span>s</span></strong><small>PACE DIFFERENTIAL</small><div class="sparkline"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div></div>
+        <div class="telemetry-card card-b"><span class="mini-label">PERFORMANCE INDEX</span><strong>98.6<span class="cyan">%</span></strong><div class="meter"><i></i></div><small>ILLUSTRATIVE UI / NOT LIVE TIMING</small></div>
+        <div class="coordinate">51° 27' 0.12" N<br>TRACK DATA // SYSTEM ONLINE</div>
+      </div>
+      <div class="hero-index">01 <span>/</span> 04</div>
+    </section>
+
+    <section class="ticker" aria-label="Project themes"><div>DRIVER PERFORMANCE <b>✳</b> CONSTRUCTOR BATTLES <b>✳</b> SEASON TRENDS <b>✳</b> RACE WINS <b>✳</b> CHAMPIONSHIP HISTORY <b>✳</b> DRIVER PERFORMANCE <b>✳</b> CONSTRUCTOR BATTLES <b>✳</b></div></section>
+
+    <section id="overview" class="section-wrap overview section-pad">
+      <div class="section-heading"><div><span class="eyebrow">01 / PROJECT BRIEF</span><h2>THE RACE, <span class="cyan">DECODED.</span></h2></div><p>Formula 1 is measured in milliseconds. This project turns race history into visual signals that help surface patterns across drivers, teams and seasons.</p></div>
+      <div class="stat-grid">
+        <article class="stat-card"><span class="stat-symbol">◈</span><span class="stat-label">THE CONSTRUCTORS</span><strong>TEAM<span class="cyan">_</span></strong><p>Compare team points and championship performance across eras.</p><div class="card-line"></div></article>
+        <article class="stat-card"><span class="stat-symbol">⌁</span><span class="stat-label">THE DRIVERS</span><strong>DRIVER<span class="cyan">_</span></strong><p>Explore wins, podiums, pole positions and points leaders.</p><div class="card-line"></div></article>
+        <article class="stat-card"><span class="stat-symbol">◷</span><span class="stat-label">THE TIMELINE</span><strong>SEASON<span class="cyan">_</span></strong><p>Track how performance and race outcomes shift over time.</p><div class="card-line"></div></article>
+        <article class="stat-card"><span class="stat-symbol">⌖</span><span class="stat-label">THE EVIDENCE</span><strong>INSIGHT<span class="cyan">_</span></strong><p>Use interactive views to investigate questions, not just view numbers.</p><div class="card-line"></div></article>
+      </div>
+    </section>
+
+    <section id="analytics" class="analytics section-pad">
+      <div class="section-wrap"><div class="section-heading"><div><span class="eyebrow">02 / ANALYTICS MODULES</span><h2>READ THE <span class="cyan">RACE.</span></h2></div><p>Four ways into the data. Each module corresponds to a question explored in the Tableau workbook.</p></div>
+        <div class="module-grid">
+          <article class="module module-wide"><div class="module-top"><span>MODULE 01</span><span class="module-icon">↗</span></div><div class="module-visual bars"><i style="height:28%"></i><i style="height:44%"></i><i style="height:37%"></i><i style="height:61%"></i><i style="height:54%"></i><i style="height:78%"></i><i style="height:67%"></i><i style="height:94%"></i><i style="height:84%"></i><i style="height:100%"></i></div><h3>CONSTRUCTOR BATTLES</h3><p>Who converts consistency into championship points? Compare teams and their historical performance.</p><span class="module-tag">TEAM POINTS / TITLES</span></article>
+          <article class="module"><div class="module-top"><span>MODULE 02</span><span class="module-icon">↗</span></div><div class="module-visual rings"><div></div><div></div><div></div></div><h3>DRIVER SUCCESS</h3><p>Compare wins, podiums and pole positions to understand driver impact.</p><span class="module-tag">WINS / PODIUMS</span></article>
+          <article class="module"><div class="module-top"><span>MODULE 03</span><span class="module-icon">↗</span></div><div class="module-visual line-chart"><svg viewBox="0 0 300 90" preserveAspectRatio="none"><path d="M0 72 L28 61 L51 66 L75 35 L99 48 L124 22 L148 39 L173 15 L198 34 L222 9 L247 28 L272 18 L300 3" fill="none" stroke="#00e5ff" stroke-width="3"/><path d="M0 72 L28 61 L51 66 L75 35 L99 48 L124 22 L148 39 L173 15 L198 34 L222 9 L247 28 L272 18 L300 3 L300 90 L0 90Z" fill="url(#none)" opacity=".1"/></svg></div><h3>PERFORMANCE OVER TIME</h3><p>Find season-by-season shifts, peaks and changing competitive patterns.</p><span class="module-tag">SEASONS / TRENDS</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tableau" class="section-wrap section-pad tableau-section">
+      <div class="section-heading"><div><span class="eyebrow">03 / INTERACTIVE DATA LAB</span><h2>YOUR VIEW. <span class="cyan">YOUR CALL.</span></h2></div><p>Explore the Tableau workbook directly from this page. Use the live published view to filter, compare and inspect the underlying charts.</p></div>
+      <div class="tableau-frame">
+        <div class="frame-top"><div class="frame-dots"><i></i><i></i><i></i></div><span>TABLEAU PUBLIC / EMBEDDED WORKBOOK</span><span class="frame-status"><i></i> CONNECT VIEW</span></div>
+        <div class="embed-placeholder" id="embedPlaceholder"><div class="embed-icon">▦</div><span class="eyebrow">DATA CONNECTION REQUIRED</span><h3>CONNECT YOUR PUBLISHED TABLEAU VIEW</h3><p>The website is ready. Add the share URL of your published Tableau dashboard in <code>script.js</code> to display the interactive workbook here.</p><a class="button primary" href="https://public.tableau.com/" target="_blank" rel="noreferrer">OPEN TABLEAU PUBLIC ↗</a><small>Use the published dashboard URL, not the local .twbx file.</small></div>
+        <iframe id="tableauEmbed" title="Interactive Formula 1 Tableau dashboard" hidden loading="lazy" allowfullscreen></iframe>
+      </div>
+      <div class="tableau-links"><span><i></i> INTERACTIVE FILTERS</span><span><i></i> DRIVER & TEAM COMPARISONS</span><span><i></i> SEASON EXPLORATION</span><a href="https://github.com/kmtp-png/Formula1-Race-Intelligence" target="_blank" rel="noreferrer">PROJECT REPOSITORY ↗</a></div>
+    </section>
+
+    <section id="method" class="method section-pad"><div class="section-wrap method-grid"><div><span class="eyebrow">04 / HOW TO READ IT</span><h2>DATA FIRST.<br><span class="cyan">HYPE SECOND.</span></h2></div><div class="method-copy"><p>This is an educational data-visualization project built around Formula 1 results and performance indicators. Charts are intended to help explore comparisons and historical patterns, not to claim a single metric explains every race outcome.</p><div class="method-steps"><div><b>01</b><span><strong>EXPLORE</strong><small>Choose a chart, driver, team or season.</small></span></div><div><b>02</b><span><strong>COMPARE</strong><small>Look for differences and patterns across groups.</small></span></div><div><b>03</b><span><strong>INTERPRET</strong><small>Read the metric and timeframe before drawing conclusions.</small></span></div></div></div></div></section>
+  </main>
+  <footer class="footer"><div class="section-wrap footer-inner"><a class="brand" href="#home"><span class="brand-mark">F1<span>•</span></span><span class="brand-copy">RACE <b>INTELLIGENCE</b><small>DATA / SPEED / STRATEGY</small></span></a><p>AN INDEPENDENT FORMULA 1 DATA-VISUALIZATION PROJECT.</p><a href="https://github.com/kmtp-png/Formula1-Race-Intelligence" target="_blank" rel="noreferrer">GITHUB ↗</a><span class="copyright">© <span id="year"></span> / BUILT FOR THE CURIOUS.</span></div></footer>
+  <script src="script.js"></script>
+</body></html>
