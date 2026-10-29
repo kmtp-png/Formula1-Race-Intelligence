@@ -20,7 +20,9 @@ if (TABLEAU_VIEW_URL.startsWith('https://public.tableau.com/')) {
   const iframe = document.getElementById('tableauEmbed');
   const placeholder = document.getElementById('embedPlaceholder');
   const separator = TABLEAU_VIEW_URL.includes('?') ? '&' : '?';
-  iframe.src = TABLEAU_VIEW_URL + separator + 'showVizHome=no&:showTabs=true&:toolbar=true';
+
+iframe.src = TABLEAU_VIEW_URL + separator +
+  ':embed=yes&:showVizHome=no&:tabs=yes&:toolbar=yes';
   iframe.hidden = false;
   placeholder.hidden = true;
 }
